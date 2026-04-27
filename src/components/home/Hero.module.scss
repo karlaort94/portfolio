@@ -1,0 +1,246 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  padding: calc(var(--pad-y) + 3rem) var(--pad-x) var(--pad-y);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1440px) {
+  .hero { min-height: 100vh; }
+}
+
+// ── Left column ────────────────────────────────────────────────────────
+.content { padding-top: 3rem; padding-left: 2rem }
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $terracotta;
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  font-family: $serif;
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+}
+.nameFirst { display: block; color: $dark; }
+.nameLast  { display: block; color: $terracotta; font-style: italic; }
+
+.title {
+  font-family: $serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-style: italic;
+  color: $brown-mid;
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: $brown-mid;
+  max-width: 400px;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btnDark {
+  display: inline-block;
+  background: $dark;
+  color: white;
+  padding: 0.85rem 2.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+  &:hover { opacity: 0.8; }
+}
+
+.btnLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $terracotta;
+  transition: opacity 0.2s;
+  &:hover { opacity: 0.7; }
+}
+
+// ── Right column — decorative card ─────────────────────────────────────
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 580px;
+  padding-right: 1.5rem;
+}
+
+.frame {
+  position: absolute;
+  bottom: -35px;
+  left: -35px;
+  width: 148px;
+  height: 148px;
+  border: 1.7px solid $terracotta;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.card {
+  position: relative;
+  width: 360px;
+  height: 490px;
+  background: $cream-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.monogram {
+  font-family: $serif;
+  font-size: 10rem;
+  font-weight: 300;
+  color: $brown-light;
+  opacity: 0.38;
+  user-select: none;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.tag {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  transform: translateX(100%);
+  background: $terracotta;
+  color: white;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  padding: 1.1rem 0.55rem;
+  line-height: 1;
+  z-index: 4;
+  transition: background 0.25s, letter-spacing 0.25s;
+  cursor: default;
+
+  &:hover {
+    background: $dark;
+    letter-spacing: 0.32em;
+  }
+}
+
+.stats {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 90%;
+  background: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 32px rgba(28, 24, 20, 0.08);
+  z-index: 3;
+}
+
+.stat {
+  text-align: center;
+  cursor: default;
+  transition: transform 0.25s;
+
+  &:hover { transform: translateY(-3px); }
+  &:hover .statNumber { color: $dark; font-size: 2.25rem; }
+  &:hover .statLabel  { color: $brown-mid; }
+}
+
+.statNumber {
+  display: block;
+  font-family: $serif;
+  font-size: 2rem;
+  color: $terracotta;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  transition: color 0.25s, font-size 0.25s;
+}
+
+.statLabel {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $brown-light;
+  transition: color 0.25s;
+}
+
+.statDivider {
+  width: 1px;
+  height: 2rem;
+  background: $cream-2;
+}
+
+// ── Tablet ─────────────────────────────────────────────────────────────
+@include tablet {
+  .hero { padding-top: calc(var(--pad-y) + 2rem); gap: 1.5rem; }
+  .card  { width: 290px; height: 390px; }
+  .visual { height: 460px; }
+  .monogram { font-size: 7.5rem; }
+  .frame { width: 115px; height: 115px; bottom: -35px; left: -30px; }
+}
+
+// ── Mobile (≤768px) — two columns, visual más pequeño ──────────────────
+@include mobile {
+  .hero {
+    padding-top: calc(var(--pad-y) + 3rem);
+    gap: 1rem;
+  }
+
+  .visual { height: 410px; padding-right: 1rem; }
+  .card   { width: 255px; height: 340px; }
+  .monogram { font-size: 6.25rem; }
+  .frame  { width: 98px; height: 98px; bottom: -28px; left: -26px; }
+  .stats  { padding: 0.85rem; }
+  .desc   { max-width: 100%; }
+}
+
+// ── Teléfono pequeño (≤580px) — una columna ────────────────────────────
+@media (max-width: 580px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: calc(var(--pad-y) + 4rem);
+    gap: 3rem;
+  }
+
+  .visual {
+    height: 360px;
+    order: -1;
+    padding-right: 1rem;
+  }
+
+  .frame  { width: 85px; height: 105px; bottom: -35px; left: -25px; }
+  .card   { width: 230px; height: 300px; }
+  .monogram { font-size: 5.5rem; }
+  .tag    { right: 0; top: 1.5rem; padding: 0.75rem 0.45rem; }
+  .stats  { padding: 1rem; width: 95%; }
+}

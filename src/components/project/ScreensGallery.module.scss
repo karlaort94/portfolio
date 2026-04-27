@@ -1,0 +1,115 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sublabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $brown-mid;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-family: $serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: $dark;
+  line-height: 1.1;
+
+  em { color: $terracotta; font-style: italic; }
+}
+
+.protoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: $terracotta;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  transition: background 0.25s, transform 0.25s;
+  white-space: nowrap;
+
+  &:hover { background: $dark; transform: translateY(-2px); }
+}
+
+.gallery {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 0 2.5rem;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: $brown-light transparent;
+
+  &:active { cursor: grabbing; }
+
+  &::-webkit-scrollbar { height: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: $brown-light; border-radius: 2px; }
+}
+
+.card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: $cream-2;
+  box-shadow: 0 8px 32px rgba(28, 24, 20, 0.10);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(160deg, rgba(196, 114, 74, 0.12) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 24px 60px rgba(28, 24, 20, 0.22);
+  }
+
+  &:hover img { transform: scale(1.02); }
+  &:hover::after { opacity: 1; }
+
+  img {
+    display: block;
+    width: auto;
+    height: 560px;
+    max-width: none;
+    object-fit: contain;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+  }
+}
+
+@include tablet {
+  .header { flex-direction: column; align-items: flex-start; }
+  .card img { height: 460px; }
+}
+
+@include mobile {
+  .gallery { padding: 1.5rem 0 2rem; gap: 1rem; }
+  .card img { height: 360px; }
+}

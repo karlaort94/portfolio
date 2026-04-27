@@ -1,0 +1,34 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid $cream-2;
+  border-bottom: 1px solid $cream-2;
+  padding: 0.9rem 0;
+  background: $cream;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: marquee-scroll 22s linear infinite;
+  font-family: $serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  color: $dark;
+  width: max-content;
+}
+
+.dot { color: $terracotta; font-size: 0.6rem; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@include mobile {
+  .track { animation-duration: 14s; }
+}

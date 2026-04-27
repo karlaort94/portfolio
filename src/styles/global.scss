@@ -1,0 +1,61 @@
+@use 'variables' as *;
+@use 'reset';
+@use 'reveal';
+@use 'project-content';
+
+// ── CSS custom properties for runtime access ────────────────────────────
+:root {
+  --cream:       #{$cream};
+  --cream-2:     #{$cream-2};
+  --terracotta:  #{$terracotta};
+  --dark:        #{$dark};
+  --brown-mid:   #{$brown-mid};
+  --brown-light: #{$brown-light};
+  --serif:       #{$serif};
+  --sans:        #{$sans};
+  --pad-x: 4rem;
+  --pad-y: 6rem;
+
+  @media (max-width: #{$bp-tablet}) {
+    --pad-x: 2.5rem;
+    --pad-y: 5rem;
+  }
+
+  @media (max-width: #{$bp-mobile}) {
+    --pad-x: 1.5rem;
+    --pad-y: 3.5rem;
+  }
+}
+
+// ── Utility: section label ──────────────────────────────────────────────
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $terracotta;
+  margin-bottom: 0.75rem;
+}
+
+.section-label__rule {
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+// ── Utility: tool pill ──────────────────────────────────────────────────
+.tool-pill {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid $brown-light;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: $brown-mid;
+}

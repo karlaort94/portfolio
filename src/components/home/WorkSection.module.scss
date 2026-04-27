@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.work {
+  padding: var(--pad-y) var(--pad-x);
+}
+
+@media (max-width: 1439px) {
+  .work { scroll-margin-top: 3rem; }
+}
+
+.title {
+  font-family: $serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: $brown-light;
+  margin-bottom: 3rem;
+  line-height: 1;
+
+  em {
+    color: $terracotta;
+    font-style: italic;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 420px 420px auto;
+  gap: 1.25rem;
+}
+
+@include tablet {
+  .grid { grid-template-rows: 360px 360px auto; }
+}
+
+@include mobile {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

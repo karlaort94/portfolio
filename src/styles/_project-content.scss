@@ -1,0 +1,197 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// ── Content block classes used in project pages ───────────────────────────
+// These use plain class names so they can be referenced in JSX with className=""
+
+.p-overview {
+  font-family: $serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  font-weight: 300;
+  line-height: 1.65;
+  color: $dark;
+  max-width: 900px;
+  margin-bottom: 3rem;
+}
+
+.p-body {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: $brown-mid;
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.p-sublabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $brown-mid;
+  margin-bottom: 1.5rem;
+
+  &--terracotta { color: $terracotta; }
+  &--light { color: $brown-light; }
+}
+
+.p-tools__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $brown-mid;
+  margin-bottom: 1.5rem;
+}
+
+.p-tools__pills { display: flex; gap: 0.65rem; flex-wrap: wrap; }
+
+.p-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 1rem;
+
+  @include tablet { gap: 2.5rem; }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.p-quote {
+  font-family: $serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-style: italic;
+  font-weight: 300;
+  color: $dark;
+  line-height: 1.6;
+  border-left: 3px solid $terracotta;
+  padding-left: 2rem;
+  margin: 0 0 2.5rem;
+  max-width: 820px;
+}
+
+.p-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: $dark;
+    transition: transform 0.2s;
+
+    &::before {
+      content: '•';
+      color: $terracotta;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    &:hover { transform: translateX(4px); }
+  }
+
+  &--plain li {
+    color: $brown-mid;
+    &::before { display: none; }
+  }
+}
+
+.p-insights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: $dark;
+    font-weight: 600;
+    transition: transform 0.2s;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 3px;
+      min-height: 1.2em;
+      background: $terracotta;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 0.15em;
+    }
+
+    &:hover { transform: translateX(4px); }
+  }
+}
+
+.p-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  counter-reset: steps;
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: $dark;
+    counter-increment: steps;
+    transition: transform 0.2s;
+
+    &::before {
+      content: '0' counter(steps);
+      font-family: $serif;
+      font-size: 1.1rem;
+      color: $terracotta;
+      flex-shrink: 0;
+      min-width: 2rem;
+    }
+
+    &:hover { transform: translateX(4px); }
+  }
+}
+
+.p-arrows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 640px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: $dark;
+    transition: transform 0.25s;
+
+    &::before {
+      content: '→';
+      color: $terracotta;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 0.1em;
+      transition: transform 0.25s;
+    }
+
+    &:hover { transform: translateX(6px); }
+    &:hover::before { transform: translateX(3px); }
+  }
+}

@@ -1,0 +1,51 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.timeline {
+  padding: var(--pad-y) var(--pad-x);
+  border-top: 1px solid $cream-2;
+}
+
+.heading {
+  @include serif-heading(clamp(3rem, 6vw, 5rem));
+  color: $dark;
+  margin-bottom: 3rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba($brown-light, 0.3);
+  transition: padding-left 0.25s;
+  cursor: default;
+
+  &:first-child { border-top: 1px solid rgba($brown-light, 0.3); }
+  &:hover { padding-left: 0.75rem; }
+  &:hover .role { color: $terracotta; }
+}
+
+.year {
+  display: block;
+  font-size: 0.8rem;
+  color: $brown-light;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-family: $serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 400;
+  color: $dark;
+  margin-bottom: 0.3rem;
+  transition: color 0.25s;
+}
+
+.place {
+  font-size: 0.85rem;
+  color: $brown-mid;
+}

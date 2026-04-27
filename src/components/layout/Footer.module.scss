@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  padding: 1.5rem var(--pad-x);
+  border-top: 1px solid $cream-2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: $brown-mid;
+}
+
+.dark {
+  background: $dark;
+  border-top-color: rgba($brown-mid, 0.3);
+  color: $brown-light;
+}
+
+@include mobile {
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

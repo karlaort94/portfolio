@@ -1,223 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karla Ortega — UX/UI & Brand Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-  <!-- ── NAVEGACIÓN ── -->
-  <nav class="nav">
-    <a href="#home" class="nav__logo">Karla Ortega</a>
-    <button class="nav__burger" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ── HERO ── -->
-  <section id="home" class="hero">
-    <div class="hero__content">
-      <div class="hero__label">
-        <span class="hero__rule"></span>
-        <span>Available for work · 2026</span>
-      </div>
-      <h1 class="hero__name">
-        <span class="hero__first">Karla</span>
-        <span class="hero__last">Ortega</span>
-      </h1>
-      <p class="hero__title">UX/UI &amp; Brand Designer</p>
-      <p class="hero__desc">Designing digital experiences and visual identities that connect strategy with emotion — from Mexico City to New York.</p>
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--dark">View Work</a>
-        <a href="KOResume.pdf" target="_blank" class="btn btn--link">Download CV →</a>
-      </div>
-    </div>
-
-    <div class="hero__visual">
-      <div class="hero__card">
-        <span class="hero__monogram">KO</span>
-        <div class="hero__frame"></div>
-        <div class="hero__tag">Designer</div>
-        <div class="hero__stats">
-          <div class="stat">
-            <span class="stat__number">5</span>
-            <span class="stat__label">Projects</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">3+</span>
-            <span class="stat__label">Years</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">4</span>
-            <span class="stat__label">Countries</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── MARQUEE DE SKILLS ── -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>UX Research</span><span class="dot">◆</span>
-      <span>Product Design</span><span class="dot">◆</span>
-      <span>Brand Identity</span><span class="dot">◆</span>
-      <span>Figma</span><span class="dot">◆</span>
-      <span>Interaction Design</span><span class="dot">◆</span>
-      <span>Visual Strategy</span><span class="dot">◆</span>
-      <span>UX Research</span><span class="dot">◆</span>
-      <span>Product Design</span><span class="dot">◆</span>
-      <span>Brand Identity</span><span class="dot">◆</span>
-      <span>Figma</span><span class="dot">◆</span>
-      <span>Interaction Design</span><span class="dot">◆</span>
-      <span>Visual Strategy</span><span class="dot">◆</span>
-    </div>
-  </div>
-
-  <!-- ── WORK ── -->
-  <section id="work" class="work">
-    <div class="work__header">
-      <div class="section-label">
-        <span class="section-label__rule"></span>
-        <span>Selected Work</span>
-      </div>
-      <h2 class="work__title">Recent <em>Projects</em></h2>
-    </div>
-
-    <div class="work__grid">
-
-      <article class="card card--tall">
-        <div class="card__img-wrap">
-          <img src="images/nescafe.png" alt="NESCAFÉ Connect project mockup">
-          <a href="nescafe.html" class="card__btn" aria-label="Ver proyecto NESCAFÉ Connect">→</a>
-        </div>
-        <div class="card__overlay">
-          <span class="card__category">UX/UI Case Study · Mexico</span>
-          <h3 class="card__name">NESCAFÉ Connect</h3>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__img-wrap">
-          <img src="images/travely.png" alt="Travely app mockup">
-          <a href="travely.html" class="card__btn" aria-label="Ver proyecto Travely">→</a>
-        </div>
-        <div class="card__overlay">
-          <span class="card__category">Product Design / UX · Mexico</span>
-          <h3 class="card__name">Travely</h3>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__img-wrap">
-          <img src="images/drguzman.png" alt="Dr. Guzmán branding">
-          <a href="drguzman.html" class="card__btn" aria-label="Ver proyecto Dr. Guzmán">→</a>
-        </div>
-        <div class="card__overlay">
-          <span class="card__category">Healthcare Branding · Mexico</span>
-          <h3 class="card__name">Dr. Guzmán</h3>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__img-wrap">
-          <img src="images/littledarling.png" alt="Little Darling Coffee branding">
-          <a href="littledarling.html" class="card__btn" aria-label="Ver proyecto Little Darling">→</a>
-        </div>
-        <div class="card__overlay">
-          <span class="card__category">Brand Identity · Canada</span>
-          <h3 class="card__name">Little Darling</h3>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card__img-wrap">
-          <img src="images/lattente.png" alt="Lattente Coffee branding">
-          <a href="lattente.html" class="card__btn" aria-label="Ver proyecto Lattente Coffee">→</a>
-        </div>
-        <div class="card__overlay">
-          <span class="card__category">Branding &amp; Packaging · Argentina / NY</span>
-          <h3 class="card__name">Lattente Coffee</h3>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ── ABOUT ── -->
-  <section id="about" class="about">
-    <div class="about__left">
-      <h2 class="about__heading">Design that speaks <em>without</em> saying too much</h2>
-      <p class="about__desc">UX/UI and Brand Designer who believes great design lives at the intersection of strategy and emotion. I work across digital products and visual identities — from user research to final pixels.</p>
-      <a href="about.html" class="about__link">More About Me →</a>
-    </div>
-    <div class="about__skills">
-      <div class="skill">
-        <span class="skill__rule"></span>
-        <h4 class="skill__name">UX Research</h4>
-        <p class="skill__desc">User interviews, personas, usability testing, IA</p>
-      </div>
-      <div class="skill">
-        <span class="skill__rule"></span>
-        <h4 class="skill__name">UI Design</h4>
-        <p class="skill__desc">Design systems, components, Figma prototyping</p>
-      </div>
-      <div class="skill">
-        <span class="skill__rule"></span>
-        <h4 class="skill__name">Branding</h4>
-        <p class="skill__desc">Brand identity, visual systems, packaging</p>
-      </div>
-      <div class="skill">
-        <span class="skill__rule"></span>
-        <h4 class="skill__name">Strategy</h4>
-        <p class="skill__desc">Product thinking, business goals, scalable design</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT ── -->
-  <section id="contact" class="contact">
-    <div class="contact__left">
-      <h2 class="contact__heading">Let's <em>work</em><br>together</h2>
-      <p class="contact__sub">Available for freelance &amp; full-time opportunities</p>
-    </div>
-    <div class="contact__right">
-      <span class="contact__prompt">Have a project in mind?</span>
-      <a href="mailto:karla.ort@icloud.com" class="contact__email">karla.ort@icloud.com →</a>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="footer">
-    <span>© 2026 Karla Ortega</span>
-    <span>UX/UI &amp; Brand Designer</span>
-  </footer>
-
-  <script>
-    // Burger menu para móvil
-    const burger = document.querySelector('.nav__burger');
-    const navLinks = document.querySelector('.nav__links');
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('is-open');
-      burger.classList.toggle('is-open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('is-open');
-        burger.classList.remove('is-open');
-      });
-    });
-  </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karla Ortega — UX/UI &amp; Brand Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <!-- spa-github-pages: restore path from query string on redirect from 404.html -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact {
+  padding: var(--pad-y) var(--pad-x);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 2rem;
+}
+
+.heading {
+  @include serif-heading(clamp(3rem, 6vw, 5.5rem));
+  color: $dark;
+  margin-bottom: 1rem;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: $brown-mid;
+}
+
+.right { text-align: right; }
+
+.prompt {
+  display: block;
+  font-size: 0.78rem;
+  color: $brown-mid;
+  margin-bottom: 0.5rem;
+}
+
+.email {
+  display: block;
+  font-family: $serif;
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  font-style: italic;
+  color: $terracotta;
+  transition: opacity 0.2s;
+  &:hover { opacity: 0.75; }
+}
+
+@include mobile {
+  .contact { grid-template-columns: 1fr; }
+  .right { text-align: left; }
+}

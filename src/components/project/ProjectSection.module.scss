@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.section {
+  padding: var(--pad-y) var(--pad-x);
+  border-top: 1px solid $cream-2;
+}
+
+.showcase { overflow: visible; }
+
+.heading {
+  font-family: $serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: $dark;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+
+  em { color: $terracotta; font-style: italic; }
+}

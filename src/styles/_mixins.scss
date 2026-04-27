@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) { @content; }
+}
+
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) { @content; }
+}
+
+@mixin serif-heading($size: clamp(2.5rem, 5vw, 4rem)) {
+  font-family: $serif;
+  font-size: $size;
+  font-weight: 300;
+  line-height: 1.1;
+  em { color: $terracotta; font-style: italic; }
+}

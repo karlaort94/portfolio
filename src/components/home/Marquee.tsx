@@ -15,7 +15,7 @@ export default function Marquee() {
         {doubled.map((skill, i) => (
           <span key={i}>
             {skill}
-            {i < doubled.length - 1 && <span className={styles.dot}> · </span>}
+            {i < doubled.length - 1 && <span className={styles.dot}> ✦ </span>}
           </span>
         ))}
       </div>

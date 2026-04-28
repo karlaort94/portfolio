@@ -12,7 +12,7 @@ export default function LittleDarlingPage() {
       <ProjectHero
         category="Brand Identity · Packaging"
         title="Little Darling Coffee"
-        subtitle="Emotional Coffee Brand Identity"
+        subtitle="Emotion-Driven coffee brand identity"
         role="Brand Designer"
         tools="Illustrator · Photoshop"
         year="2024"

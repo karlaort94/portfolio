@@ -22,7 +22,7 @@
   width: max-content;
 }
 
-.dot { color: $terracotta; font-size: 0.6rem; }
+.dot { color: $terracotta; font-size: 0.6rem; margin-left: 2rem; }
 
 @keyframes marquee-scroll {
   from { transform: translateX(0); }

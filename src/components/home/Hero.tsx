@@ -43,7 +43,7 @@ export default function Hero() {
         <div className={styles.card}>
           <div className={styles.frame} />
           <span className={styles.monogram}>KO</span>
-          <span className={styles.tag}>Portfolio 2025</span>
+          <span className={styles.tag}>DESIGNER</span>
           <div className={styles.stats}>
             <div className={styles.stat}>
               <span className={styles.statNumber}>5+</span>
@@ -51,12 +51,12 @@ export default function Hero() {
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNumber}>3</span>
+              <span className={styles.statNumber}>4</span>
               <span className={styles.statLabel}>Countries</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNumber}>2+</span>
+              <span className={styles.statNumber}>3+</span>
               <span className={styles.statLabel}>Years</span>
             </div>
           </div>

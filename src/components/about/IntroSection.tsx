@@ -13,7 +13,7 @@ export default function IntroSection() {
           <Reveal as="p" className={styles.text}>
             Hello, I'm Karla a Graphic Designer and UX/UI Designer with experience creating advertising campaigns for
             restaurants, bars, hospitals, and gyms. I specialize in combining visual creativity with a
-            focus on user experience and brand identity, I bring a strong eye
+            focus on user experience and brand identity. I bring a strong eye
             for detail, composition, and meaningful aesthetics to every project.
           </Reveal>
           <Reveal as="p" className={styles.text}>

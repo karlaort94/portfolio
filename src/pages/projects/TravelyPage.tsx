@@ -12,7 +12,7 @@ export default function TravelyPage() {
       <ProjectHero
         category="Group Travel · Planning App"
         title="Travely"
-        subtitle="Simplifying group travel planning in one place"
+        subtitle="Organizing every part of group travel in one app"
         role="UX/UI Designer"
         tools="Figma · Maze"
         year="2025"
@@ -25,7 +25,7 @@ export default function TravelyPage() {
 
       <ProjectSection label="Overview">
         <Reveal as="p" className="p-overview">
-          Travely is a mobile app designed to simplify group travel planning by allowing users to organize itineraries, manage shared expenses, and coordinate trips with friends or family in one place. The goal was to reduce the friction and confusion that often happens when multiple people are involved in planning a trip.
+           Travely is a mobile app designed to simplify group travel planning. It lets users to organize itineraries, track shared expenses, and coordinate trips with friends or family in one place.
         </Reveal>
         <div className="p-tools">
           <p className="p-tools__label">Tools &amp; Technologies</p>
@@ -94,7 +94,7 @@ export default function TravelyPage() {
 
       <ProjectSection label="The Solution" heading="A centralized experience" headingEm="experience">
         <Reveal as="p" className="p-body">
-          Travely offers a centralized platform where users can create and manage trip itineraries, track shared expenses in real time, invite and collaborate with friends, and organize travel details in one place. The interface uses a clean, modern style with travel-inspired visuals.
+          Travely offers a centralized platform where users can create and manage trip itineraries, track shared expenses in real time, collaborate with friends or family, and keep all travel details organized in one place. Its interface features a clean, modern design supported by subtle travel-inspired visuals. 
         </Reveal>
         <Reveal as="ul" className="p-list">
           <li>Create and manage trip itineraries</li>
